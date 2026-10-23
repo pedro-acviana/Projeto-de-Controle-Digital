@@ -1,0 +1,4 @@
+01:10:04 #PRBS u0=10300 du=2400 duracao_bit=60 s tempo_aquecimento=2000 s, duracao total 9.07 h
+01:10:04 #ESTADO modo=PRBS ref=50.00 K=2140.0000 z0=0.94470 aw=1 prbs=[10300 2400 60 2000] wmode=0 ens=0
+10:14:25 #PRBS concluido em k=32660
+10:20:27 #ESTADO modo=IDLE ref=50.00 K=2140.0000 z0=0.94470 aw=1 prbs=[10300 2400 60 2000] wmode=0 ens=0

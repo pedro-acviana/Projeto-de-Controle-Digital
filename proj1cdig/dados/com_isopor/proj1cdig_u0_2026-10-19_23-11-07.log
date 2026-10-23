@@ -1,0 +1,4 @@
+23:11:07 #ESTADO modo=OPEN ref=50.00 K=2140.0000 z0=0.94470 aw=1 prbs=[8320 1680 60 2000] wmode=1 ens=0
+23:25:57 #? comando desconhecido: u 11700 (h = ajuda)
+23:26:09 #ESTADO modo=OPEN ref=50.00 K=2140.0000 z0=0.94470 aw=1 prbs=[8320 1680 60 2000] wmode=1 ens=0
+23:37:08 #ESTADO modo=IDLE ref=50.00 K=2140.0000 z0=0.94470 aw=1 prbs=[8320 1680 60 2000] wmode=0 ens=0

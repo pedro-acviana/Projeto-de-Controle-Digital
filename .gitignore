@@ -1,0 +1,28 @@
+# Material da disciplina e livros (direitos autorais): ver README
+Referencias/
+
+# Arquivos grandes ou duplicados
+*.mp4
+*.zip
+
+# Figura antiga substituída pela versão PNG
+proj1cdig_relatorio/figs/proj1cdig_sim_aw_10C.pdf
+
+# Python / MATLAB / LaTeX / editores
+__pycache__/
+*.pyc
+*.asv
+*.aux
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.out
+.vscode/
+
+# ESP-IDF (caso alguém compile dentro do repositório)
+build/
+sdkconfig
+sdkconfig.old
+managed_components/
