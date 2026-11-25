@@ -1,0 +1,9 @@
+14:16:50 #ESTADO modo=CTRL ref=50.00 K=1854.8462 z0=0.92680 aw=1 prbs=[10200 2100 60 2000] wmode=0 ens=1
+14:16:50 #ENSAIO iniciado: ref 50.0/60.0 C, meio periodo 400 s, 3600 s no total, ISE entre 2100 e 3000 s
+14:16:50 #ESTADO modo=CTRL ref=50.00 K=1854.8462 z0=0.92680 aw=1 prbs=[10200 2100 60 2000] wmode=0 ens=1
+14:16:51 #ENSAIO t=0 s: cooler desligado
+14:33:33 #ENSAIO t=1002 s: perturbacao constante
+14:46:54 #ENSAIO t=1803 s: perturbacao triangular
+15:00:12 #ENSAIO t=2601 s: perturbacao constante
+15:06:52 #ISE(2100-3000 s) = 2687.7
+15:16:53 #ENSAIO concluido: ISE(2100-3000 s) = 2687.7

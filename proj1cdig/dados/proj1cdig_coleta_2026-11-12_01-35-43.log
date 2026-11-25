@@ -1,0 +1,20 @@
+01:35:50 #--- proj1cdig: comandos (uma linha cada) ---
+01:35:50 # x                      para tudo (aquecedor e cooler em 0)
+01:35:50 # s                      so le sensores, aquecedor em 0 (log 1 s)
+01:35:50 # o <u>                  malha aberta, aquecedor fixo em u (0..21000)
+01:35:50 # p [u0 du duracao_bit_s tempo_aquecimento_s]
+01:35:50 #                        PRBS: fica tempo_aquecimento_s em u0, depois alterna
+01:35:50 #                        u0+du / u0-du, cada nivel durando duracao_bit_s
+01:35:50 # c [ref]                malha fechada PI, Ts=2629 ms (ref padrao 50.0)
+01:35:50 # r <ref>                degrau de referencia (em CTRL)
+01:35:50 # a <0|1>                anti-windup desligado/ligado
+01:35:50 # e [r_baixa r_alta meio_periodo_s]
+01:35:50 #                        ensaio do roteiro (Fig. 5): onda quadrada (padrao P.O. / P.O.+10,
+01:35:50 #                        400 s) + perturbacao constante e triangular, 3600 s, calcula o ISE
+01:35:50 # k <K> <z0>             troca o PI sem regravar
+01:35:50 # w0 | wc <w> | ws | wt  cooler: off | constante | senoide | triangular
+01:35:50 # h                      esta ajuda
+01:35:59 #ESTADO modo=SENS ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=0 ens=0
+01:36:14 #ESTADO modo=OPEN ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=0 ens=0
+01:47:29 #ESTADO modo=OPEN ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=0 ens=0
+02:06:08 #ESTADO modo=IDLE ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=0 ens=0

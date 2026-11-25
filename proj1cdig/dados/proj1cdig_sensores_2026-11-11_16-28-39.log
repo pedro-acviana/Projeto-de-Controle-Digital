@@ -1,0 +1,28 @@
+16:28:39 #ESTADO modo=SENS ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=0 ens=0
+16:28:53 #ESTADO modo=OPEN ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=0 ens=0
+16:29:53 #ESTADO modo=OPEN ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=2 ens=0
+16:30:11 #ESTADO modo=OPEN ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=0 ens=0
+16:31:42 [descartada] D,2493.517,168,OPEN,10200,0,47.0
+16:31:42 29,24.685,nan,1
+16:40:32 #ESTADO modo=OPEN ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=0 ens=0
+16:51:23 #ESTADO modo=OPEN ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=1 ens=0
+16:52:00 #ESTADO modo=OPEN ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=1 ens=0
+16:54:14 #ESTADO modo=OPEN ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=1 ens=0
+16:56:36 #ESTADO modo=OPEN ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=0 ens=0
+17:05:08 #--- proj1cdig: comandos (uma linha cada) ---
+17:05:08 # x                      para tudo (aquecedor e cooler em 0)
+17:05:08 # s                      so le sensores, aquecedor em 0 (log 1 s)
+17:05:08 # o <u>                  malha aberta, aquecedor fixo em u (0..21000)
+17:05:08 # p [u0 du duracao_bit_s tempo_aquecimento_s]
+17:05:08 #                        PRBS: fica tempo_aquecimento_s em u0, depois alterna
+17:05:08 #                        u0+du / u0-du, cada nivel durando duracao_bit_s
+17:05:08 # c [ref]                malha fechada PI, Ts=2629 ms (ref padrao 50.0)
+17:05:08 # r <ref>                degrau de referencia (em CTRL)
+17:05:08 # a <0|1>                anti-windup desligado/ligado
+17:05:08 # e [r_baixa r_alta meio_periodo_s]
+17:05:08 #                        ensaio do roteiro (Fig. 5): onda quadrada (padrao P.O. / P.O.+10,
+17:05:08 #                        400 s) + perturbacao constante e triangular, 3600 s, calcula o ISE
+17:05:08 # k <K> <z0>             troca o PI sem regravar
+17:05:08 # w0 | wc <w> | ws | wt  cooler: off | constante | senoide | triangular
+17:05:08 # h                      esta ajuda
+17:09:05 #ESTADO modo=IDLE ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=0 ens=0

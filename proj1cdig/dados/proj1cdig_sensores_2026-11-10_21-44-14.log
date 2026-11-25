@@ -1,0 +1,47 @@
+21:44:14 #ESTADO modo=IDLE ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=2 ens=0
+21:47:58 #ESTADO modo=IDLE ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=0 ens=0
+21:51:34 #ESTADO modo=IDLE ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=1 ens=0
+21:53:10 #ESTADO modo=IDLE ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=1 ens=0
+21:53:22 #ESTADO modo=IDLE ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=1 ens=0
+21:53:29 #ESTADO modo=IDLE ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=1 ens=0
+21:53:38 #ESTADO modo=IDLE ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=1 ens=0
+21:54:01 #ESTADO modo=IDLE ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=1 ens=0
+21:54:14 #ESTADO modo=IDLE ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=1 ens=0
+21:54:24 #ESTADO modo=IDLE ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=1 ens=0
+21:54:33 #ESTADO modo=IDLE ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=1 ens=0
+21:54:42 #ESTADO modo=IDLE ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=1 ens=0
+21:54:58 #ESTADO modo=IDLE ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=1 ens=0
+21:55:11 #ESTADO modo=IDLE ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=1 ens=0
+21:55:17 #ESTADO modo=IDLE ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=1 ens=0
+21:57:17 #ESTADO modo=IDLE ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=1 ens=0
+21:57:53 #ESTADO modo=IDLE ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=1 ens=0
+21:58:13 #ESTADO modo=IDLE ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=0 ens=0
+22:25:56 #--- proj1cdig: comandos (uma linha cada) ---
+22:25:56 # x                      para tudo (aquecedor e cooler em 0)
+22:25:57 # s                      so le sensores, aquecedor em 0 (log 1 s)
+22:25:57 # o <u>                  malha aberta, aquecedor fixo em u (0..21000)
+22:25:57 # p [u0 du duracao_bit_s tempo_aquecimento_s]
+22:25:57 #                        PRBS: fica tempo_aquecimento_s em u0, depois alterna
+22:25:57 #                        u0+du / u0-du, cada nivel durando duracao_bit_s
+22:25:57 # c [ref]                malha fechada PI, Ts=2629 ms (ref padrao 50.0)
+22:25:57 # r <ref>                degrau de referencia (em CTRL)
+22:25:57 # a <0|1>                anti-windup desligado/ligado
+22:25:57 # e [r_baixa r_alta meio_periodo_s]
+22:25:57 #                        ensaio do roteiro (Fig. 5): onda quadrada (padrao P.O. / P.O.+10,
+22:25:57 #                        400 s) + perturbacao constante e triangular, 3600 s, calcula o ISE
+22:25:57 # k <K> <z0>             troca o PI sem regravar
+22:25:57 # w0 | wc <w> | ws | wt  cooler: off | constante | senoide | triangular
+22:25:57 # h                      esta ajuda
+22:26:26 #ESTADO modo=OPEN ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=0 ens=0
+22:30:15 [descartada] D,3228.518,229,OPEN,10200,0,47.0
+22:30:15 46,26.627,nan,1
+22:41:58 [descartada] D,3931.517,932,OPEN,10200,0,49.7
+22:41:58 44,26.468,nan,1
+22:52:33 #ESTADO modo=OPEN ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=0 ens=0
+22:53:08 [descartada] D,4601.517,35,OPEN,10300,0,49.91
+22:53:08 6,26.501,nan,1
+23:01:58 #ESTADO modo=OPEN ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=1 ens=0
+23:03:38 #ESTADO modo=OPEN ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=1 ens=0
+23:05:44 #ESTADO modo=OPEN ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=1 ens=0
+23:07:37 #ESTADO modo=OPEN ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=1 ens=0
+23:12:21 #ESTADO modo=IDLE ref=50.00 K=2039.9595 z0=0.94216 aw=1 prbs=[10200 2000 60 2000] wmode=0 ens=0

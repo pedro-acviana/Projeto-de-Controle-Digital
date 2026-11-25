@@ -4,7 +4,7 @@
  *
  * Unidade do atuador: CONTAGENS do PWM de 16 bits do aquecedor (0..65535 = 0..12 V médio),
  * como pede o roteiro atualizado (passo 2: "PRBS implementado via PWM 16 bits").
- * Kp identificado (21/10/2026): parte rápida Kp·Tz/Tp1 ≈ 0,0017 °C/contagem; PI ≈ 2000 contagens/°C.
+ * Kp identificado (21/10/2026, sem isopor): parte rápida Kp·Tz/Tp1 ≈ 0,0017 °C/contagem; PI ≈ 2000 contagens/°C.
  * O cooler continua em 10 bits (0..1023): ele é perturbação, não precisa de resolução.
  */
 #pragma once
@@ -60,24 +60,24 @@
 /* ---------------- Perturbação (cooler) ---------------- */
 /* Escala 0..1023 (10 bits). Zona morta medida (Etapa E): o motor parte em ~530 (52 %).
  * A senoide/triangular é COOLER_OFFSET ± COOLER_AMP, nunca cruzando a zona morta. */
-#define COOLER_OFFSET      620    /* medido em 20/10: w = 680 derruba Tp ~5 °C a 50 °C em malha aberta */
+#define COOLER_OFFSET      620    /* sem isopor (20/10): w = 680 derruba Tp ~5 °C a 50 °C em malha aberta */
 #define COOLER_AMP         60     /* triangular 560..680; perturbação constante do ensaio = 680 */
 
 /* ---------------- Identificação (PRBS) ---------------- */
-#define PRBS_DEFAULT_U0    10200  /* u0 medido na Etapa F (20/10): Tp ≈ 49,8 °C (15,6 % de duty) */
-#define PRBS_DEFAULT_DU    2000   /* ±5 °C em regime (ganho local ~0,0025); coleta de 20–21/10: 45,9–56,1 °C */
+#define PRBS_DEFAULT_U0    10200  /* u0 medido na Etapa F (20/10, sem isopor): Tp ≈ 49,8 °C (15,6 % de duty) */
+#define PRBS_DEFAULT_DU    2100   /* ±5 °C em regime (ganho local ~0,0025); coleta de 20–21/10: 45,9–56,1 °C */
 #define PRBS_DEFAULT_BIT_S 60     /* duração de cada nível; LFSR de 9 bits → 2^9-1 = 511 bits = 8,5 h */
 #define PRBS_DEFAULT_T_AQUEC_S 2000 /* tempo em u0 antes do PRBS, para sair do ambiente e
                                        estabilizar no P.O. (= transit = 2000 do script do professor) */
 
 /* ---------------- Controlador PI discreto ---------------- */
 /* C(z) = PI_K * (z - PI_Z0) / (z - 1), período CTRL_TS_MS. Projeto do proj1cdig_m.m (21/10/2026)
- * sobre o modelo identificado (Tp − Ta): Kp = 0,00320 °C/cont, Tz = 821,9 s,
+ * sobre o modelo identificado sem isopor (Tp − Ta): Kp = 0,00320 °C/cont, Tz = 821,9 s,
  * Tp1 = 1553,9 s, Tp2 = 34,46 s, Td = 5,257 s (fit 86 %). LGR discreto (ZOH, atraso de 2 amostras)
  * + refino: Mp = 10,1 %, tp = 23,7 s em simulação. */
-#define CTRL_TS_MS         2629   /* Ts = Td/2 */
-#define PI_K               2039.9595f /* contagens/°C */
-#define PI_Z0              0.94216f
+#define CTRL_TS_MS         2743   /* Ts = Td/2 */
+#define PI_K               1854.8462f /* contagens/°C */
+#define PI_Z0              0.92680f
 
 /* ---------------- Ensaio do roteiro (passo 8, Figura 5) — comando "e" ----------------
  * Referência em onda quadrada entre P.O. e P.O. + ENSAIO_AMPL_C, meio período ENSAIO_MEIO_PERIODO_S.

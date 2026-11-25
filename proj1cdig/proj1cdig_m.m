@@ -19,11 +19,11 @@ clear; close all; clc
 
 %% 0. Parâmetros do grupo  <<< TROQUE AQUI >>>
 GRUPO = 2;                    % grupo 2: PO 50 °C, Mp 10 %, Tp 25 s, w0 0,065
-ARQ_PRBS = 'dados/proj1cdig_prbs_2026-10-20_23-26-20.csv';
-ARQ_MF = 'dados/proj1cdig_ensaio_aw0_2026-10-21_11-56-47.csv';               % CSV do ensaio em malha fechada (seção 9), '' para pular
+ARQ_PRBS = 'outputs/E/proj1cdig_coleta_2026-11-12_02-49-21.csv';
+ARQ_MF   = '';                % CSV do ensaio em malha fechada (seção 9), '' para pular
 Sat      = 21000;             % = U_MAX do firmware (3 × 150 Ω a 12 V: 32 % de 65535, 0,31 W por resistor)
 ABRIR_SISOTOOL = false;       % true para abrir o Control System Designer nas seções 5 e 6
-U0_MEDIDO = 10200;            % u que deixou Tp estável no P.O. (Etapa F, 20/10)
+U0_MEDIDO = 10200;            % u que deixou Tp estável no P.O. (Etapa F, 20/10, sem isopor)
 
 g      = mod(GRUPO-1, 10) + 1;
 tabW0  = [0.065 0.065 0.065 0.065 0.065 0.098 0.098 0.098 0.098 0.098];
@@ -49,15 +49,15 @@ subplot(312); plot(tm/3600, tam); ylabel('Ta [°C]'); grid on
 subplot(313); plot(tm/3600, um); ylabel('u [cont.]'); xlabel('t [h]'); grid on
 
 %% 2. Identificação P2DZ (procest)
-transit = 2000;                                 % descarta o aquecimento até o P.O. (= warm_s)
+transit = 1500;                                 % descarta o aquecimento até o P.O. (= warm_s)
 USAR_TP_MENOS_TA = true;                        % identifica Tp − Ta: tira a deriva da sala
-                                                % (ex.: queda de ~0,9 °C em Ta ao amanhecer, na coleta de 20–21/10)
+                                                % (ex.: queda de 0,7 °C em Ta às 6h40 da coleta)
 ui = um(transit:end);
 if USAR_TP_MENOS_TA, yi = ym(transit:end) - tam(transit:end); else, yi = ym(transit:end); end
 uid = ui - mean(ui);  yid = yi - mean(yi);
 
 % Chute inicial e limites na faixa do roteiro. Sem eles o procest cai num mínimo local
-% (Tz = 0, Tp1 ~ 40 s, Td ~ 2 s, fit menor) que perde a cauda lenta da resposta.
+% (Tz = 0, Tp1 ~ 40 s, Td ~ 2 s, fit ~85 %) que perde a cauda lenta da resposta.
 ini = idproc('P2DZ');
 ini.Structure.Kp.Value  = 0.002;  ini.Structure.Kp.Minimum  = 0;
 ini.Structure.Tp1.Value = 300;    ini.Structure.Tp1.Minimum = 50;  ini.Structure.Tp1.Maximum = 2000;
